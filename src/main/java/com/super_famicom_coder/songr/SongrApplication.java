@@ -1,4 +1,4 @@
-package com.super.famicom.coder.songr;
+package com.super_famicom_coder.songr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
