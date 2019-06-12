@@ -1,13 +1,20 @@
 package com.super_famicom_coder.songr;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ReverseTextController {
 
     @GetMapping("/reverse")
-    public String getReverse() {
-        return "Welcome to the reverse page!";
+    @ResponseBody
+    public String getReverseSentence(@RequestParam String sentence) {
+        String[] words = sentence.split(" ");
+        String reversedString = "";
+
+        for (int i = words.length - 1; i >= 0; i-- ) {
+            reversedString = reversedString + words[i] + " ";
+        }
+
+        return reversedString;
     }
 }
