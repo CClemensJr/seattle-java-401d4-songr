@@ -22,8 +22,8 @@ public class Album {
     @NotNull(message = "A song count is required")
     protected int songCount;
 
-    @NotNull(message = "A song length is required")
-    protected int songLength;
+    @NotNull(message = "A length is required")
+    protected int length;
 
     @NotBlank(message = "An image source url is required")
     protected String imageUrl;

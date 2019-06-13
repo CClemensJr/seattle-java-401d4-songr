@@ -4,11 +4,12 @@
     </head>
     <body>
         <h1>All Albums</h1>
-<!--        <div>-->
-<!--            <ul th:each="album : ${ albums }">-->
-<!--                <li th:text></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-
+        <div>
+            <ul th:each="album : ${ albums }">
+                <li th:text>Album: ${ album.title }</li>
+                <li th:text>Artist: ${ album.artist }</li>
+                <li><span th:text>${ album.songCount } songs,</span> <span th:text>${ album.length / 60 } minutes</span></li>
+            </ul>
+        </div>
     </body>
 </html>
