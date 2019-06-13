@@ -1,8 +1,7 @@
-package com.super_famicom_coder.songr.models.repositories;
+package com.super_famicom_coder.songr;
 
-import com.super_famicom_coder.songr.models.Album;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-//@Repository
+@Repository
 public interface AlbumRepository extends CrudRepository<Album, Long> {}

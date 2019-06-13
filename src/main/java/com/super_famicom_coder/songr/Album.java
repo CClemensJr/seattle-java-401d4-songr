@@ -1,4 +1,4 @@
-package com.super_famicom_coder.songr.models;
+package com.super_famicom_coder.songr;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

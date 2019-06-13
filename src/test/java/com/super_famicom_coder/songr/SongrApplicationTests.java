@@ -1,7 +1,5 @@
 package com.super_famicom_coder.songr;
 
-import com.super_famicom_coder.songr.controllers.CapitalizeController;
-import com.super_famicom_coder.songr.controllers.ReverseTextController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
