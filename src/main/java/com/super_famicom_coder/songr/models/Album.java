@@ -9,6 +9,9 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Album {
+/**********
+ * Instance variables
+ * */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
@@ -28,6 +31,11 @@ public class Album {
     @NotBlank(message = "An image source url is required")
     String imageUrl;
 
+
+/**********
+ * Constructors
+ * */
+
     public Album() {}
 
     public Album(String title, String artist, int songCount, int length, String imageUrl) {
@@ -38,4 +46,15 @@ public class Album {
         this.length = length;
         this.imageUrl = imageUrl;
     }
+
+
+/**********
+ * Instance Methods
+ * */
+    public String getTitle() { return this.title; }
+    public String getArtist() { return this.artist; }
+    public int getSongCount() { return this.songCount; }
+    public int getLength() { return (this.length) * 60; }
+    public String getImageURl() { return this.imageUrl; }
+
 }
