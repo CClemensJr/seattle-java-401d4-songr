@@ -26,10 +26,12 @@ public class AlbumController {
         return "allAlbums";
     }
 
+
     @GetMapping("/add-album")
     public String showAlbumForm() {
         return "addAlbum";
     }
+
 
     @PostMapping("/add-album")
     public String newAlbum(@Valid Album a, BindingResult r, Model m) {
