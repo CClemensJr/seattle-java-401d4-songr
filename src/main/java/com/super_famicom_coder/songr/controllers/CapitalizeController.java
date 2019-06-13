@@ -1,4 +1,4 @@
-package com.super_famicom_coder.songr;
+package com.super_famicom_coder.songr.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
