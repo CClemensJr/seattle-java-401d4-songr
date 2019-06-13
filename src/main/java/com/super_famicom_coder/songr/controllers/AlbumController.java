@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.validation.Valid;
 
@@ -27,20 +29,26 @@ public class AlbumController {
     }
 
 
-    @GetMapping("/add-album")
+    @GetMapping("/albums/new")
     public String showAlbumForm() {
-        return "addAlbum";
+        return "albumForm";
     }
 
 
-    @PostMapping("/add-album")
-    public String newAlbum(@Valid Album a, BindingResult r, Model m) {
-        if (r.hasErrors()) return "addAlbum";
-
-        albumRepository.save(a);
-
-        m.addAttribute(("albums", albumRepository.findAll()));
-
-        return "allAlbums";
-    }
+//    @PostMapping("/albums")
+//    public RedirectView addAlbum(@RequestParam String title,
+//                                 @RequestParam String artist,
+//                                 @RequestParam int songCount,
+//                                 @RequestParam int length) {
+//        if (r.hasErrors()) return new RedirectView("/albums");
+//
+//        Album album = new Album(title, artist, songCount, length);
+//
+//        albumRepository.save(album);
+//
+//        m.addAttribute(("albums", albumRepository.findAll()))
+//
+//
+//        return new RedirectView("/albums");
+//    }
 }

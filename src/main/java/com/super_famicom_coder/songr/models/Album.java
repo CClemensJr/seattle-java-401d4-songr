@@ -10,21 +10,32 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Album {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    protected long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    long id;
 
     @NotBlank(message = "An album title is required")
-    protected String title;
+    String title;
 
     @NotBlank(message = "An artist is required")
-    protected String artist;
+    String artist;
 
     @NotNull(message = "A song count is required")
-    protected int songCount;
+    int songCount;
 
     @NotNull(message = "A length is required")
-    protected int length;
+    int length;
 
     @NotBlank(message = "An image source url is required")
-    protected String imageUrl;
+    String imageUrl;
+
+    public Album() {}
+
+    public Album(String title, String artist, int songCount, int length, String imageUrl) {
+
+        this.title = title;
+        this.artist = artist;
+        this.songCount = songCount;
+        this.length = length;
+        this.imageUrl = imageUrl;
+    }
 }
