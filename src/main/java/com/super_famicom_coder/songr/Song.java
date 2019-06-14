@@ -14,7 +14,8 @@ public class Song {
     private int id;
 
     @ManyToOne
-    private String album;
+    @JoinColumn(name = "album_id", nullable = false)
+    private Album album;
 
     @NotBlank(message = "An song title is required")
     private String title;
@@ -31,7 +32,7 @@ public class Song {
  * */
     public Song() {}
 
-    public Song(String album, String title, int length, int trackNumber) {
+    public Song(Album album, String title, int length, int trackNumber) {
 
         this.album = album;
         this.title = title;
@@ -43,7 +44,7 @@ public class Song {
 /**********
  * Instance Methods
  * */
-    public String getAlbum() { return this.album; }
+    public Album getAlbum() { return this.album; }
     public String getTitle() { return this.title; }
     public int getLength() { return this.length; }
     public int getTrackNumber() { return this.trackNumber; }

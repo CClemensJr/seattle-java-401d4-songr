@@ -39,6 +39,9 @@ public class SongrApplication {
 		albumRepository.save(album4);
 		albumRepository.save(album5);
 
-		Song song1 = new Song(album1.getTitle(), "");
+		Song song1 = new Song(album1, "Heroes", 164, 1);
+
+
+		songRepository.save(song1);
 	}
 }
