@@ -1,4 +1,5 @@
 package com.super_famicom_coder.songr;
 
-public class SongRepository {
-}
+import org.springframework.data.repository.CrudRepository;
+
+public interface SongRepository extends CrudRepository<Song, Long> {}
