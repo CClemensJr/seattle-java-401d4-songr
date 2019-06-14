@@ -6,6 +6,9 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Song {
+/**********
+ * Instance variables
+ * */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,4 +26,25 @@ public class Song {
     private int trackNumber;
 
 
+/**********
+ * Constructors
+ * */
+    public Song() {}
+
+    public Song(Album album, String title, int length, int trackNumber) {
+
+        this.album = album;
+        this.title = title;
+        this.length = length;
+        this.trackNumber = trackNumber;
+    }
+
+
+/**********
+ * Instance Methods
+ * */
+    public Album getAlbum() { return this.album; }
+    public String getTitle() { return this.title; }
+    public int getLength() { return this.length; }
+    public int getTrackNumber() { return this.trackNumber; }
 }

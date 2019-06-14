@@ -35,7 +35,6 @@ public class Album {
 /**********
  * Constructors
  * */
-
     public Album() {}
 
     public Album(String title, String artist, int songCount, int length, String imageUrl) {
