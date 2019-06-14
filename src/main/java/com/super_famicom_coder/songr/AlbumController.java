@@ -1,7 +1,5 @@
-package com.super_famicom_coder.songr.controllers;
+package com.super_famicom_coder.songr;
 
-import com.super_famicom_coder.songr.models.Album;
-import com.super_famicom_coder.songr.models.repositories.AlbumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
