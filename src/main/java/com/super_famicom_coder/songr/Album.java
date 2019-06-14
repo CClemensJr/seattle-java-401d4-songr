@@ -5,7 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-@Entity
+@Entity(name = "Albums")
 public class Album {
 /**********
  * Instance variables
