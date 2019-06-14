@@ -1,11 +1,9 @@
 package com.super_famicom_coder.songr;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -14,22 +12,25 @@ public class Album {
  * */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    private long id;
+
+    @OneToMany(mappedBy = "album")
+    private List<Song> songs;
 
     @NotBlank(message = "An album title is required")
-    String title;
+    private String title;
 
     @NotBlank(message = "An artist is required")
-    String artist;
+    private String artist;
 
     @NotNull(message = "A song count is required")
-    int songCount;
+    private int songCount;
 
     @NotNull(message = "A length is required")
-    int length;
+    private int length;
 
     @NotBlank(message = "An image source url is required")
-    String imageUrl;
+    private String imageUrl;
 
 
 /**********
@@ -50,8 +51,11 @@ public class Album {
 /**********
  * Instance Methods
  * */
+    public void setSongs(Song song) { this.songs.add(song); }
+
     public String getTitle() { return this.title; }
     public String getArtist() { return this.artist; }
+    public List getSongs() { return this.songs; }
     public int getSongCount() { return this.songCount; }
     public int getLength() { return (this.length) * 60; }
     public String getImageURl() { return this.imageUrl; }
