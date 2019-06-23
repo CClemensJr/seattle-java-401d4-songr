@@ -22,7 +22,7 @@
 
 ## Summary
 1. Create an Album model.
-  * An Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl that is a link to that album’s art.
+    1. An Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl that is a link to that album’s art.
 2. A user should be able to see information about all the albums on the site.
 3. A user should be able to add albums to the site.
 
@@ -34,4 +34,26 @@
 5. Navigate to the /albums or /albums/new route.
 6. Enter a string.
     1. If on the /new route, enter the appropriate info into the form.
-7. Watch in wonder as an album is created.
+    7. Watch in wonder as an album is created.
+
+
+# Lab 13: Related Resources and Integration Testing
+> Continue working in the same webapp you generated for the previous two labs.
+
+## Summary
+1. Create a Song model.
+    1. A Song has a title, a length (in seconds), a trackNumber, and the album on which that song appears.
+    2. Ensure that the relationship between Albums and Songs is appropriately set up
+2. A user should be able to see information about all the songs on the site.
+3. A user should be able to view a page with data about one particular album.
+4. A user should be able to add songs to an album.
+    1. A user should be able to see the songs that belong to an album when looking at that album.
+
+## Setup
+1. Clone the repo.
+2. Install gradle.
+3. Build the repo via ./gradlew build.
+4. Start the server via .gradlew bootRun
+5. Navigate to the /songs or /songs/new route.
+    1. If on the /new route, enter the appropriate info into the form.  
+    7. Watch in wonder as a new song is created.
